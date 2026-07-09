@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zaka's bio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Particle Background Canvas */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Profile Card Styling */
+        .profile-card {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        /* Circular Profile Picture */
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px auto;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Name and Bio */
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .profile-title {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .profile-bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <div class="profile-img-container">
+            <!-- Replace the src URL with your own image link -->
+            <img src="https://yt3.googleusercontent.com/xgU2Ds1IaXcJgBcPb8agmIzTXT3B8IbKhhrSqQfIU1QqnEOskb861ltjLkHOFKM1FA8ZDDziZzA=s160-c-k-c0x00ffffff-no-rj" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="profile-name">zaka13</div>
+        <div class="profile-title">dev, ig?</div>
+        <div class="profile-bio">
+            chill guy, 80% code, 20% skid, guy that makes wayyy to many ubg links for certain people, I know html, css, and javascript
+        </div>
+    </div>
+
+    <!-- Particle.js Library -->
+    <script src="https://jsdelivr.net/placeholder"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
