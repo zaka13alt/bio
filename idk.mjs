@@ -2,7 +2,7 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // config
-const titleText = "zaka13's bio (hi!)"; // h
+const titleText = "zaka's bio (hi!)"; // h
 const typingSpeed = 150; 
 const pauseBeforeRestart = 200; 
 
