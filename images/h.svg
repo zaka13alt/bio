@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="500"
+     height="120"
+     viewBox="0 0 500 120">
+
+  <rect width="100%" height="100%" fill="#222"/>
+  <text id="status"
+        x="20"
+        y="60"
+        fill="white"
+        font-size="24"
+        font-family="monospace">
+    Loading...
+  </text>
+
+  <script><![CDATA[
+    (async () => {
+      const text = document.getElementById("status");
+
+      try {
+        const response = await fetch("https://api.ipify.org?format=json");
+        const data = await response.json();
+        text.textContent = "Public IP: " + data.ip;
+      } catch (e) {
+        text.textContent = "Failed to fetch IP";
+      }
+    })();
+  ]]></script>
+
+</svg>
