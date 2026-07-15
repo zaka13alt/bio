@@ -3,8 +3,8 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // config
 const titleText = "zaka's bio (hi!)"; // h
-const typingSpeed = 150; 
-const pauseBeforeRestart = 100; 
+const typingSpeed = 300; 
+const pauseBeforeRestart = 75; 
 
 async function typeTitleLoop() {
   while (true) {
@@ -25,7 +25,7 @@ async function typeTitleLoop() {
     }
 
     // wait until next loop
-     await sleep(200);
+     await sleep(85);
   }
 }
 
